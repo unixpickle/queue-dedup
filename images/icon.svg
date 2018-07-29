@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <path id="right-half" fill="#f45342" d="M82,5 v60 c-28,-10 -28,45 10,25 v-85" />
+    <rect id="right-connector" fill="#f45342" x="40" y="5" width="50" height="10" />
+    <path id="left-half" fill="#393939" d="M53,5 h-30 v60 c-28,-10 -28,45 10,25 v-75 h30" />
+</svg>

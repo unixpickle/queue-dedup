@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "queue-dedup",
+    "version": "0.1",
+    "page_action": {
+        "default_icon": {
+            "19": "images/icon.svg",
+            "38": "images/icon.svg"
+        },
+        "default_title": "queue-dedup"
+    },
+    "permissions": [
+        "declarativeContent",
+        "tabs",
+        "https://play.google.com/music/*"
+    ],
+    "externally_connectable": {
+        "matches": [
+            "https://play.google.com/music/*"
+        ]
+    }
+}
