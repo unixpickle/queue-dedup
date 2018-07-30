@@ -4,10 +4,16 @@
     "version": "0.1",
     "page_action": {
         "default_icon": {
-            "19": "images/icon.svg",
-            "38": "images/icon.svg"
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
         },
         "default_title": "queue-dedup"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
     },
     "permissions": [
         "declarativeContent",
