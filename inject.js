@@ -1,11 +1,6 @@
 (function () {
 
     function removeDuplicates() {
-        const wasOpen = isQueueOpen();
-        if (!wasOpen) {
-            toggleQueue();
-        }
-
         let runNext;
         runNext = (removedDup) => {
             if (!removedDup) {
@@ -13,9 +8,8 @@
             }
             return removeNextDuplicate().then(runNext);
         };
-
-        if (!wasOpen) {
-            return runNext(true).then(() => toggleQueue());
+        if (!isQueueOpen()) {
+            return toggleQueue().then(() => runNext(true)).then(() => toggleQueue());
         } else {
             return runNext(true);
         }
@@ -39,6 +33,7 @@
 
     function toggleQueue() {
         document.getElementById('queue').click();
+        return new Promise((resolve) => setTimeout(resolve, 1000));
     }
 
     function songRows() {
