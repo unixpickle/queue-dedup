@@ -20,7 +20,7 @@
         for (let i = rows.length - 1; i >= 0; i--) {
             const row = rows[i];
             const prefix = rows.slice(0, i);
-            if (prefix.filter((x) => x.songTitle() === row.songTitle()).length) {
+            if (prefix.filter((x) => x.lowerSongTitle() === row.lowerSongTitle()).length) {
                 return row.remove();
             }
         }
@@ -67,6 +67,10 @@
         constructor(elem) {
             this.element = elem;
             this._title = null;
+        }
+
+        lowerSongTitle() {
+            return this.songTitle().toLowerCase();
         }
 
         songTitle() {
